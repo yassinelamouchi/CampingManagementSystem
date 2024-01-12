@@ -1,0 +1,170 @@
+.main_menu_container{
+    -fx-background-color: #EEEEEE;
+    -fx-alignment: center;
+}
+.left_container {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(three-pass-box,#AAAAAA,5,0,0,4);
+}
+.title_container {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 20 20 0 0;   
+    -fx-alignment: top-center;
+    -fx-padding: 10;
+    
+    
+}
+.title_container FontAwesomeIconView {
+    -fx-fill: #132A13;
+}
+.title_container Text {
+    -fx-fill: #000000;   
+    -fx-font-size: 2em;
+    
+    
+}
+.menu_container {
+    -fx-padding: 10 10 10 20;
+    -fx-spacing: 20;
+    -fx-background-color: #EEEEEE;
+    -fx-background-radius: 10;
+}
+.menu_container button{
+    -fx-text-fill: #132A13;
+    -fx-pref-width: 115;
+    -fx-background-color: #FFFFFF;
+    -fx-pref-hight: 40;
+    -fx-font-size: 2em;
+    -fx-effect: dropshadow(three-pass-box,#ff3333,5,0,0,6);
+    -fx-alignment: CENTER_LEFT;
+}
+.menu_container button:hover{
+    -fx-cursor: hand;
+}
+.menu_container FontAwesomeIconView {
+    -fx-fill: #132A13;
+}
+.alt_menu_btn {
+    -fx-pref-width: 115;
+    -fx-pref-hight: 40;
+    -fx-background-color: #132A13;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 1.1em;
+    -fx-alignment: CENTER_LEFT;
+    -fx-effect: dropshadow(three-pass-box,#999999,5,0,0,6);
+    
+}
+.alt_menu_btn FontAwesomeIconView {
+    -fx-fill: #FFFFFF;
+}
+.report_container {
+    -fx-background-color: #EEFFEE;
+    -fx-background-radius: 10;
+    -fx-alignment: CENTER;
+    -fx-spacing: 10;
+    -fx-padding: 10 0 10 0;
+    
+}
+.report_container text{
+    -fx-font-weight: bold;
+    -fx-fill: #132A13;
+}
+.report_container label {
+    -fx-text-alignment: center;
+    -fx-wrap-text: true;
+    
+}
+.report_container button {
+    -fx-pref-width: 80;
+    -fx-background-color: #132A13;
+    -fx-text-fill: #FFFFFF;
+    
+}
+.report_container button:hover{
+    -fx-cursor: hand;
+}
+.report_container button FontAwesomeIconView {
+    -fx-fill: #FFFFFF;
+}
+.nrml_btn{
+    -fx-effect: dropshadow(three-pass-box,#999999,5,0,0,6);
+}
+/*
+ * //////////////////////////////////////////////////////////////
+ */
+
+.acceuil_container {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 20;
+    
+}
+.acceuil1_container {
+    -fx-background-color: #DDDDDD;
+    -fx-background-radius: 20;
+    
+}
+.acceuil2_container {
+    -fx-background-color: #e9e8e8;
+    -fx-background-radius: 20;
+    
+}
+.alt_menu_btn {
+    -fx-pref-width: 164;
+    -fx-pref-hight: 47;
+    -fx-background-color: #132A13;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 1.1em;
+    -fx-alignment: CENTER_LEFT;
+    
+}
+.notes_container{
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 20;
+}
+.alt_menu_btn1 {
+    -fx-pref-width: 180;
+    -fx-pref-hight: 47;
+    -fx-background-color: #132A13;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 1.1em;
+    -fx-alignment: CENTER_LEFT;
+    
+}
+.table{
+    -fx-background-radius: 20;
+}
+.bt_containers{
+    -fx-background-radius: 10;
+    -fx-background-color: #cccccc;
+    
+}
+.titre_container1 {
+    
+    -fx-spacing: 20;
+    -fx-background-color: #EEEEEE;
+    -fx-background-radius: 10;
+}
+.titre_container1 text {
+    
+    -fx-background-color: #EEEEEE;
+    
+}
+.ajout_container {
+    -fx-background-color: #DDDDDD;
+    -fx-background-radius: 20;
+    
+}
+.ajout_head_container{
+    -fx-background-radius: 10;
+    -fx-background-color: #EEFFEE;
+}
+.alt_reservation_btn {
+    -fx-pref-width: 164;
+    -fx-pref-hight: 47;
+    -fx-background-color: #097324;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 1.1em;
+    -fx-alignment: CENTER_LEFT;
+    
+}

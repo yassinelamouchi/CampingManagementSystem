@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<!-- 
+
+-->
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1000.0" styleClass="acceuil1_container" stylesheets="@../Styles/home.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="campingmanagementsystem.AffichageController">
+   <children>
+      <AnchorPane fx:id="affichage" layoutX="190.0" layoutY="14.0" prefHeight="730.0" prefWidth="800.0" styleClass="acceuil_container" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <TabPane layoutX="6.0" layoutY="71.0" prefHeight="654.0" prefWidth="784.0" tabClosingPolicy="UNAVAILABLE" tabMaxWidth="250.0">
+              <tabs>
+                <Tab text="Camps">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="tab_camp" layoutX="10.0" layoutY="55.0" prefHeight="528.0" prefWidth="764.0" styleClass="table" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="55.0">
+                                 <columns>
+                                    <TableColumn fx:id="camp_col_id" minWidth="20.0" prefWidth="157.0" text="Num-Id" />
+                                    <TableColumn fx:id="camp_col_type" minWidth="20.0" prefWidth="157.0" text="Type" />
+                                    <TableColumn fx:id="camp_col_capacity" minWidth="20.0" prefWidth="157.0" text="Capacité" />
+                                    <TableColumn fx:id="camp_camp_espace" minWidth="20.0" prefWidth="157.0" text="Espace" />
+                                    <TableColumn fx:id="camp_col_prix" minWidth="20.0" prefWidth="157.0" text="Prix" />
+                                 </columns>
+                              </TableView>
+                              <AnchorPane layoutX="629.0" layoutY="8.0" prefHeight="47.0" prefWidth="762.0" styleClass="bt_containers" stylesheets="@../design/login.css" AnchorPane.bottomAnchor="570.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="8.0">
+                                 <children>
+                                    <Button fx:id="btn_ajout_camp" layoutX="652.0" layoutY="10.0" mnemonicParsing="false" onAction="#addcamp" prefHeight="28.0" prefWidth="100.0" styleClass="nrml_btn" text="Ajout Camp" AnchorPane.topAnchor="7.0" />
+                                    <Button fx:id="btn_delete_camp" layoutX="14.0" layoutY="7.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="100.0" styleClass="nrml_btn" text="Delete Camp" />
+                                    <Button layoutX="206.0" layoutY="7.0" mnemonicParsing="false" onAction="#search" prefHeight="28.0" prefWidth="100.0" styleClass="nrml_btn" text="search" />
+                                    <TextField fx:id="numIdSearch" layoutX="328.0" layoutY="11.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                     <graphic>
+                        <ImageView blendMode="MULTIPLY" fitHeight="20.0" fitWidth="20.0">
+                           <image>
+                              <Image url="@../Images/tent3.jpg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                </Tab>
+                <Tab text="Campers">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="tab_camper" layoutY="55.0" prefHeight="444.0" prefWidth="786.0" styleClass="table" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="55.0">
+                                 <columns>
+                                    <TableColumn fx:id="camper_col_id" minWidth="20.0" prefWidth="131.0" text="Id" />
+                                    <TableColumn fx:id="camper_col_nom" minWidth="20.0" prefWidth="131.0" text="Nom" />
+                                    <TableColumn fx:id="camper_col_prenom" minWidth="20.0" prefWidth="131.0" text="Prénom" />
+                                    <TableColumn fx:id="camper_col_tele" minWidth="20.0" prefWidth="131.0" text="Num-Tel" />
+                                    <TableColumn fx:id="camper_col_datein" minWidth="20.0" prefWidth="131.0" text="Date-Check-In" />
+                                    <TableColumn fx:id="camper_col_dateout" minWidth="20.0" prefWidth="131.0" text="Date-Check-Out" />
+                                 </columns>
+                              </TableView>
+                              <AnchorPane prefHeight="47.0" prefWidth="762.0" styleClass="bt_containers" AnchorPane.bottomAnchor="570.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="8.0">
+                                 <children>
+                                    <Button fx:id="btn_ajout_camper" layoutX="652.0" layoutY="10.0" mnemonicParsing="false" onAction="#addcamper" prefHeight="28.0" prefWidth="100.0" styleClass="nrml_btn" text="Ajout Camper" AnchorPane.topAnchor="7.0" />
+                                    <Button fx:id="btn_delete_camper" layoutX="14.0" layoutY="7.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="100.0" styleClass="nrml_btn" text="Delete Camper" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                     <graphic>
+                        <ImageView blendMode="MULTIPLY" fitHeight="20.0" fitWidth="20.0">
+                           <image>
+                              <Image url="@../Images/camper.jpg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                </Tab>
+                  <Tab text="Equipe">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="tab_equipe" prefHeight="502.0" prefWidth="786.0" styleClass="table" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="62.0">
+                                 <columns>
+                                    <TableColumn fx:id="employe_col_id" minWidth="20.0" prefWidth="153.0" text="Id" />
+                                    <TableColumn fx:id="employe_col_nom" minWidth="20.0" prefWidth="153.0" text="Nom" />
+                                    <TableColumn fx:id="employe_col_prenom" minWidth="20.0" prefWidth="153.0" text="Prénom" />
+                                    <TableColumn fx:id="employe_col_tel" minWidth="20.0" prefWidth="153.0" text="Num-Tel" />
+                                    <TableColumn fx:id="employe_col_role" minWidth="20.0" prefWidth="153.0" text="Role" />
+                                 </columns>
+                              </TableView>
+                              <AnchorPane prefHeight="47.0" prefWidth="762.0" styleClass="bt_containers" AnchorPane.bottomAnchor="570.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="8.0">
+                                 <children>
+                                    <Button fx:id="btn_ajout_equipe" layoutX="652.0" layoutY="10.0" mnemonicParsing="false" onAction="#addEmploye" prefHeight="28.0" prefWidth="100.0" styleClass="nrml_btn" text="Ajout Employé" AnchorPane.topAnchor="7.0" />
+                                    <Button fx:id="btn_delete_equipe" layoutX="14.0" layoutY="10.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="100.0" styleClass="nrml_btn" text="Delete Employé" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                     <graphic>
+                        <ImageView blendMode="MULTIPLY" fitHeight="20.0" fitWidth="20.0">
+                           <image>
+                              <Image url="@../Images/equipe.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Tab>
+                  <Tab text="Equipement">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="tab_equipement" prefHeight="502.0" prefWidth="786.0" styleClass="table" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="62.0">
+                                 <columns>
+                                    <TableColumn fx:id="equipement_col_type" minWidth="20.0" prefWidth="260.0" text="Type" />
+                                    <TableColumn fx:id="equipement_col_quantite" minWidth="20.0" prefWidth="260.0" text="Quatite" />
+                                    <TableColumn fx:id="equipement_col_prix" minWidth="20.0" prefWidth="260.0" text="Prix" />
+                                 </columns>
+                              </TableView>
+                              <AnchorPane prefHeight="47.0" prefWidth="762.0" styleClass="bt_containers" AnchorPane.bottomAnchor="570.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="8.0">
+                                 <children>
+                                    <Button fx:id="btn_ajout_equipement" layoutX="631.0" layoutY="10.0" mnemonicParsing="false" onAction="#addEquipement" prefHeight="28.0" prefWidth="121.0" styleClass="nrml_btn" text="Ajout Equipement" AnchorPane.topAnchor="7.0" />
+                                    <Button fx:id="btn_delete_equipement" layoutX="14.0" layoutY="7.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="121.0" styleClass="nrml_btn" text="Delete Equipement" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                     <graphic>
+                        <ImageView blendMode="MULTIPLY" fitHeight="20.0" fitWidth="20.0">
+                           <image>
+                              <Image url="@../Images/equipement.jpg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Tab>
+                  <Tab text="Reservation">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="tab_reservation" layoutX="1.0" prefHeight="563.0" prefWidth="777.0" styleClass="table" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="62.0">
+                                 <columns>
+                                    <TableColumn fx:id="reservation_col_id" minWidth="20.0" prefWidth="110.0" text="Id" />
+                                    <TableColumn fx:id="reservation_col_nom" minWidth="20.0" prefWidth="110.0" text="Nom" />
+                                    <TableColumn fx:id="reservation_col_prenom" minWidth="20.0" prefWidth="110.0" text="Prénom" />
+                                    <TableColumn fx:id="reservation_col_camp" minWidth="20.0" prefWidth="110.0" text="Camp Type" />
+                                    <TableColumn fx:id="reservation_col_equipement" minWidth="20.0" prefWidth="110.0" text="Equipement Type" />
+                                    <TableColumn fx:id="reservation_col_quantity" minWidth="20.0" prefWidth="110.0" text="Quantite" />
+                                    <TableColumn fx:id="reservation_col_date" minWidth="20.0" prefWidth="129.0" text="Date de réservation" />
+                                 </columns>
+                              </TableView>
+                              <AnchorPane prefHeight="47.0" prefWidth="762.0" styleClass="bt_containers" AnchorPane.bottomAnchor="570.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="8.0">
+                                 <children>
+                                    <Button fx:id="btn_delete_reservation" layoutX="14.0" layoutY="7.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="129.0" styleClass="nrml_btn" text="Delete Reservation" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                     <graphic>
+                        <ImageView blendMode="MULTIPLY" fitHeight="20.0" fitWidth="20.0">
+                           <image>
+                              <Image url="@../Images/plus.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Tab>
+                  <Tab text="Facture">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="tab_facture" prefHeight="502.0" prefWidth="786.0" styleClass="table" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="62.0">
+                                 <columns>
+                                    <TableColumn fx:id="facture_col_id" minWidth="20.0" prefWidth="192.0" text="Id" />
+                                    <TableColumn fx:id="facture_col_nom" minWidth="20.0" prefWidth="192.0" text="Nom" />
+                                    <TableColumn fx:id="facture_col_prenom" minWidth="20.0" prefWidth="192.0" text="Prénom" />
+                                    <TableColumn fx:id="facture_col_prix" minWidth="20.0" prefWidth="192.0" text="Prix-Total" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                     <graphic>
+                        <ImageView blendMode="MULTIPLY" fitHeight="20.0" fitWidth="20.0">
+                           <image>
+                              <Image url="@../Images/facture.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Tab>
+              </tabs>
+            </TabPane>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="My Camp" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="619.3447265625" AnchorPane.topAnchor="13.84814453125">
+               <font>
+                  <Font name="Berlin Sans FB" size="37.0" />
+               </font>
+            </Text>
+            <ImageView blendMode="MULTIPLY" fitHeight="66.0" fitWidth="74.0" layoutX="716.0" layoutY="2.0" styleClass="title_container">
+               <image>
+                  <Image url="@../Images/logo.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <VBox fx:id="sidebar" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="180.0" styleClass="main_menu_container" stylesheets="@../design/home.css">
+         <children>
+            <AnchorPane prefHeight="730.0" prefWidth="160.0" styleClass="left_container" stylesheets="@../Styles/home.css">
+               <children>
+                  <VBox prefHeight="80.0" prefWidth="180.0" styleClass="title_container" AnchorPane.bottomAnchor="592.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ImageView blendMode="MULTIPLY" fitHeight="118.0" fitWidth="111.0" styleClass="title_container">
+                           <image>
+                              <Image url="@../Images/logo.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+                  <VBox layoutY="202.0" prefHeight="400.0" prefWidth="160.0" styleClass="menu_container" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="202.0">
+                     <children>
+                        <Button fx:id="btn_acceuil" mnemonicParsing="false" onAction="#homepage" prefHeight="40.0" prefWidth="100.0" styleClass="nrml_btn" text="Acceuil">
+                           <graphic>
+                              <ImageView blendMode="MULTIPLY" fitHeight="20.0" fitWidth="20.0">
+                                 <image>
+                                    <Image url="@../Images/fire.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btn_camp" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" styleClass="nrml_btn" text="My Camp">
+                           <graphic>
+                              <ImageView blendMode="MULTIPLY" fitHeight="20.0" fitWidth="20.0">
+                                 <image>
+                                    <Image url="@../Images/tent3.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Line endX="120.0" />
+                        <Button fx:id="btn_logout" mnemonicParsing="false" onAction="#loginPage" prefHeight="40.0" prefWidth="100.0" styleClass="alt_menu_btn" text="Logout" textAlignment="CENTER">
+                           <VBox.margin>
+                              <Insets top="40.0" />
+                           </VBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0">
+                                 <image>
+                                    <Image url="@../Images/logout3.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="120.0" prefWidth="130.0" styleClass="report_container" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Report Suggestion/Bug?">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                        <Label prefHeight="35.0" prefWidth="152.0" text="Use this to report any errors or suggestions." textAlignment="CENTER" wrapText="true" />
+                        <Button fx:id="btn_report" alignment="TOP_CENTER" mnemonicParsing="false" styleClass="alt_menu_btn" text="Report" textAlignment="CENTER">
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0">
+                                 <image>
+                                    <Image url="@../Images/attention.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <AnchorPane layoutX="21.0" layoutY="138.0" prefWidth="138.0" styleClass="titre_container1">
+                     <children>
+                        <Text layoutX="10.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="titre_container1" text="WeCamp">
+                           <font>
+                              <Font name="Berlin Sans FB" size="30.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
